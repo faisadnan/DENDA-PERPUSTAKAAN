@@ -1,41 +1,24 @@
-# Prerequisites
-*.d
+#include <iostream>
+using namespace std;
+//adnan fais rafai 202531008
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main() {
+    int hari_terlambat, denda;
 
-# Precompiled Headers
-*.gch
-*.pch
+    cout << "Masukkan jumlah hari terlambat: ";
+    cin >> hari_terlambat;
 
-# Linker files
-*.ilk
+    if (hari_terlambat == 0) {
+        denda = 0;
+    } else if (hari_terlambat >= 1 && hari_terlambat <= 3) {
+        denda = hari_terlambat * 2000;
+    } else if (hari_terlambat >= 4 && hari_terlambat <= 7) {
+        denda = hari_terlambat * 5000;
+    } else {
+        denda = hari_terlambat * 10000;
+    }
 
-# Debugger Files
-*.pdb
+    cout << "Total denda: Rp" << denda << endl;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+    return 0;
+}
